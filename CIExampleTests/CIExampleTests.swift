@@ -11,26 +11,32 @@ import XCTest
 
 class CIExampleTests: XCTestCase {
     
+    var viewController: ViewController?
+    
     override func setUp() {
         super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        viewController = ViewController()
     }
     
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testValidSumWithValidResult() {
+        let num1: Double = 4.0
+        let num2: Double = 4.0
+        
+        let result: Double? = viewController?.sum(num1, with: num2)
+        XCTAssertNotNil(result, "Verificando se o meu objeto Result não é nil")
+        XCTAssertEqual(result, 8.0, "A soma dos dois valores deve ser igual a 8.0")
     }
     
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    func testSumWithInvalidResult() {
+        let num1: Double = 2.0
+        let num2: Double = 7.0
+        
+        let result: Double? = viewController?.sum(num1, with: num2)
+        XCTAssertNotNil(result, "Verificando se o meu objeto Result não é nil")
+        XCTAssertNotEqual(result, 10.0, "A soma dos dois valores deve ser igual a 9.0")
     }
-    
 }
