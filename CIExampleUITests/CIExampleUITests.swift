@@ -14,7 +14,7 @@ class CIExampleUITests: XCTestCase {
     override func setUp() {
         super.setUp()
         continueAfterFailure = false
-        XCUIApplication().launch()
+        app.launch()
     }
     
     override func tearDown() {
@@ -33,7 +33,9 @@ class CIExampleUITests: XCTestCase {
         }
         
         waitForExpectations(timeout: 5.0) { (error) in
-            XCTFail("Componentes não foram encontrados")
+            if let notFoundError = error {
+                XCTFail(notFoundError.localizedDescription)
+            }
         }
     }
 }
