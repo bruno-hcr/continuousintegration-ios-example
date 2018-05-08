@@ -17,8 +17,7 @@ platform :ios do
   lane :run_build_tests do
 
     scan(
-      scheme: "CIExample",
-      devices: ["iPhone 8"]
+      scheme: "CIExample"
     )
   end
 
