@@ -19,7 +19,9 @@ platform :ios do
     cocoapods
 
     scan(
-      scheme: "CIExample"
+      scheme: "CIExample",
+      clean: true,
+			code_coverage: true
     )
   end
 
