@@ -5,8 +5,8 @@
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
+        <development version="8000" identifier="xcode"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -14,6 +14,10 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CIExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="g7m-Zv-ccu"/>
+                        <viewControllerLayoutGuide type="bottom" id="EiV-KM-A0G"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -31,14 +35,13 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fn1-v3-pZb" secondAttribute="trailing" constant="16" id="F3B-fl-RUJ"/>
-                            <constraint firstItem="mWZ-Ij-cxe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="HfM-6U-3hb"/>
-                            <constraint firstItem="mWZ-Ij-cxe" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="cWK-Ro-vMu"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mWZ-Ij-cxe" secondAttribute="trailing" constant="16" id="cw0-jv-F00"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="fn1-v3-pZb" secondAttribute="bottom" constant="16" id="hIi-W3-Wum"/>
-                            <constraint firstItem="fn1-v3-pZb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="qEo-DD-KDI"/>
+                            <constraint firstAttribute="trailing" secondItem="fn1-v3-pZb" secondAttribute="trailing" constant="16" id="F3B-fl-RUJ"/>
+                            <constraint firstItem="mWZ-Ij-cxe" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="HfM-6U-3hb"/>
+                            <constraint firstItem="mWZ-Ij-cxe" firstAttribute="top" secondItem="g7m-Zv-ccu" secondAttribute="bottom" constant="16" id="cWK-Ro-vMu"/>
+                            <constraint firstAttribute="trailing" secondItem="mWZ-Ij-cxe" secondAttribute="trailing" constant="16" id="cw0-jv-F00"/>
+                            <constraint firstItem="EiV-KM-A0G" firstAttribute="top" secondItem="fn1-v3-pZb" secondAttribute="bottom" constant="16" id="hIi-W3-Wum"/>
+                            <constraint firstItem="fn1-v3-pZb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="qEo-DD-KDI"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
