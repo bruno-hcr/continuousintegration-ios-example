@@ -16,6 +16,8 @@ platform :ios do
   desc "Roda e valida build e testes"
   lane :run_build_tests do
 
+    cocoapods
+
     scan(
       scheme: "CIExample"
     )
